@@ -53,9 +53,7 @@ def send_to_dlq(producer: KafkaProducer, raw_payload: str, error_reason: str, pa
 
 
 def consume_loop():
-    """
-    Background polling loop for POC-2 demonstrating Poison Pill handling & DLQ redirection.
-    """
+
     import time
     
     logger.info(f"Starting POC-2 Consumer loop on topic='{KAFKA_POC_2_ORDERS_TOPIC}' group='{KAFKA_POC_2_GROUP}'")
